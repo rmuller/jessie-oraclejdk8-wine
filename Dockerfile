@@ -7,8 +7,6 @@ RUN export DEBIAN_FRONTEND=noninteractive &&\
     dpkg --add-architecture i386 &&\
     apt-get update -qq &&\
     apt-get install -qq lib32z1 lib32ncurses5 libbz2-1.0:i386 wine:i386 &&\
-    echo 'vm.mmap_min_addr = 0' > /etc/sysctl.conf &&\
     apt-get clean &&\
     rm -rf /var/lib/apt/lists/* /var/log/apt/*
 CMD /bin/bash
-
