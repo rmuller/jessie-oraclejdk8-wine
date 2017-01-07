@@ -11,13 +11,13 @@ environment during the (maven) build.
 This image uses [rmuller/jessie-oraclejdk8](https://hub.docker.com/r/rmuller/jessie-oraclejdk8/) as 
 base image.
 
-Total size of this image is 652 MB.
+Total size of this image is 652 MB (252 MB compressed).
 
 This image is available via [hub.docker.com](https://hub.docker.com/r/rmuller/jessie-oraclejdk8-wine/).
 
 | Docker tag | Debian 8         | Oracle JDK 8 | Maven 3  | Wine  |
 |------------|------------------|--------------|----------|-------|
-| 1.0.0      | 8.6 x86-64 4.4.0 | 1.8.0_112    | 3.3.9    | 1.6.2 |
+| 1.0.x      | 8.6 x86-64 4.4.0 | 1.8.0_112    | 3.3.9    | 1.6.2 |
 
 To run this image in interactive mode:
 
@@ -25,3 +25,7 @@ To run this image in interactive mode:
 $ docker run -it rmuller/jessie-oraclejdk8-wine
 ````
 
+### Version history
+
++ `1.0.0` Initial release
++ `1.0.1` Fix for error when used by Bitbucket Pipelines: "winevdm DOS memory range is unavailable."
